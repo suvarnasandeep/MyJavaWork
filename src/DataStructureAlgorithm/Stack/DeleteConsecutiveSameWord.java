@@ -1,4 +1,4 @@
-package Stack;
+package DataStructureAlgorithm.Stack;
 
 /*
         Input : ab aa aa bcd ab

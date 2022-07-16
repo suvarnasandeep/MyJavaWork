@@ -1,4 +1,4 @@
-package HashMap;
+package DataStructureAlgorithm.HashMap;
 
 import java.util.HashMap;
 import java.util.Iterator;

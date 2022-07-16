@@ -1,4 +1,4 @@
-package LinkedList.DoubleLinkedList.ConstructDoubleLinkedList;
+package DataStructureAlgorithm.LinkedList.DoubleLinkedList.ConstructDoubleLinkedList;
 
 public class Node {
 	public int data;

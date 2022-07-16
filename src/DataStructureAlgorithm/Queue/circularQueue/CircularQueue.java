@@ -1,4 +1,4 @@
-package Queue.circularQueue;
+package DataStructureAlgorithm.Queue.circularQueue;
 
 public class CircularQueue {
 

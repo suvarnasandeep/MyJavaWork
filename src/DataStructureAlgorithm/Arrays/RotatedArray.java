@@ -1,4 +1,4 @@
-package Arrays;
+package DataStructureAlgorithm.Arrays;
 
 public class RotatedArray {
 	

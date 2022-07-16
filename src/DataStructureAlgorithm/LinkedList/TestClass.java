@@ -1,4 +1,4 @@
-package LinkedList;
+package DataStructureAlgorithm.LinkedList;
 
 public class TestClass {
 

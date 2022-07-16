@@ -1,4 +1,4 @@
-package Sorting;
+package DataStructureAlgorithm.Algorithms.Sorting;
 
 public class SortMain {
     public static void main(String[] args) {

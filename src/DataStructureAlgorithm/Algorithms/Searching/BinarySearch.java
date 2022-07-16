@@ -1,4 +1,4 @@
-package Searching;
+package DataStructureAlgorithm.Algorithms.Searching;
 
 public class BinarySearch {
 

@@ -1,7 +1,7 @@
-package Queue;
+package DataStructureAlgorithm.Queue;
 
-import Queue.circularQueue.CircularQueue;
-import Queue.simpleQueue.Queue;
+import DataStructureAlgorithm.Queue.circularQueue.CircularQueue;
+import DataStructureAlgorithm.Queue.simpleQueue.Queue;
 
 public class QueueMain {
 

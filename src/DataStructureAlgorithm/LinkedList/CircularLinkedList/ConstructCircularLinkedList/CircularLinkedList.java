@@ -1,6 +1,6 @@
-package LinkedList.CircularLinkedList.ConstructCircularLinkedList;
+package DataStructureAlgorithm.LinkedList.CircularLinkedList.ConstructCircularLinkedList;
 
-import LinkedList.Node.Node;
+import DataStructureAlgorithm.LinkedList.Node.Node;
 
 public class CircularLinkedList {
 	

@@ -1,4 +1,4 @@
-package HashMap;
+package DataStructureAlgorithm.HashMap;
 
 public class Employee {
 

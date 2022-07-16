@@ -1,4 +1,4 @@
-package Stack;
+package DataStructureAlgorithm.Stack;
 
 import java.util.LinkedList;
 import java.util.Queue;

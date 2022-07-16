@@ -1,4 +1,4 @@
-package Stack;
+package DataStructureAlgorithm.Stack;
 
 public class NumberOfNextGreaterElements {
 

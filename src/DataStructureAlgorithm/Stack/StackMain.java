@@ -1,4 +1,4 @@
-package Stack;
+package DataStructureAlgorithm.Stack;
 
 import com.sun.org.apache.regexp.internal.RE;
 

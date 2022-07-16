@@ -1,4 +1,4 @@
-package HashMap;
+package DataStructureAlgorithm.HashMap;
 
 import java.util.Collections;
 import java.util.Comparator;

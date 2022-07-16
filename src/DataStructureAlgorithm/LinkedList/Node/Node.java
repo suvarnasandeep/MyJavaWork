@@ -1,4 +1,4 @@
-package LinkedList.Node;
+package DataStructureAlgorithm.LinkedList.Node;
 
 public class Node {
 	public int data;

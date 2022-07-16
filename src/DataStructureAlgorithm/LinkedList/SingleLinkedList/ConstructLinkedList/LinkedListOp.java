@@ -1,7 +1,7 @@
-package LinkedList.SingleLinkedList.ConstructLinkedList;
+package DataStructureAlgorithm.LinkedList.SingleLinkedList.ConstructLinkedList;
 
-import LinkedList.Node.Node;
-import LinkedList.TestClass;
+import DataStructureAlgorithm.LinkedList.Node.Node;
+import DataStructureAlgorithm.LinkedList.TestClass;
 
 public class LinkedListOp {
 

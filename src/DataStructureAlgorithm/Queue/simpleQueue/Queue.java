@@ -1,4 +1,4 @@
-package Queue.simpleQueue;
+package DataStructureAlgorithm.Queue.simpleQueue;
 
 public class Queue {
 

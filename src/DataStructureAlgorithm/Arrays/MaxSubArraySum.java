@@ -1,4 +1,4 @@
-package Arrays;
+package DataStructureAlgorithm.Arrays;
 
 //O(1)
 /*The simple idea of Kadane’s algorithm is to look for all positive contiguous segments of the array (max_ending_here is used for this).

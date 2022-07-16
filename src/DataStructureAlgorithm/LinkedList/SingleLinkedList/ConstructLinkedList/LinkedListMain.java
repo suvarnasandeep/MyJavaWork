@@ -1,6 +1,6 @@
-package LinkedList.SingleLinkedList.ConstructLinkedList;
+package DataStructureAlgorithm.LinkedList.SingleLinkedList.ConstructLinkedList;
 
-import LinkedList.Node.Node;
+import DataStructureAlgorithm.LinkedList.Node.Node;
 
 public class LinkedListMain {
 

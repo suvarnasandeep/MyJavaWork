@@ -1,4 +1,4 @@
-package Arrays;
+package DataStructureAlgorithm.Arrays;
 
 import java.util.HashMap;
 import java.util.Map;
