@@ -3,24 +3,20 @@ package DataStructureAlgorithm.Arrays;
 public class ArraysMain {
 
 	public static void main(String[] args) {
-
 		//jaggeredArray();
-		//rotatedArrayRotate();
+		rotatedArrayRotate();
 		//searchInRotatedArray();
-		//nonRepeatingElement();
-		maxSUbArraySum();
-
-		//getEqualStack();
-
-		//getMissingNumber();
-		
-		//getNumberOfPairs();
-		//getMultipleAndFactors();
-		//getTwoSum();
-		//getDuplicatesInArray();
-		//getNumOfMaxVal();
-		//getEqualDistribution();
-		//getMinLoss();
+//		nonRepeatingElement();
+//		maxSUbArraySum();
+//		getEqualStack();
+//		getMissingNumber();
+//		getNumberOfPairs();
+//		getMultipleAndFactors();
+//		getTwoSum();
+//		getDuplicatesInArray();
+//		getNumOfMaxVal();
+//		getEqualDistribution();
+//		getMinLoss();
 	}
 
 	private static void getMinLoss() {
@@ -141,29 +137,23 @@ public class ArraysMain {
 	private static void rotatedArrayRotate() {
 		setSeparator("Array Rotation by N");
 		int[]arr = {1,2,3,4,5,6};
-		RotatedArray arrObj = new RotatedArray();
-		//method 1
-		//arrObj.rotateMethod1(arr,arr.length, 2);
-		//arrObj.rotateByN(arr, arr.length, 2);
-		System.out.println("------------------------");
 
-		//method 2
-		arrObj.rotateByN_One(arr, arr.length, 2);
-
+		RotatedArray.rotateArrayLeftBF(arr, 2);
+		RotatedArray.rotateArrayLeft(arr, 2);
+		System.out.println("------------------");
+		RotatedArray.rotateArrayRight(arr, 7);
 	}
 
 	private static void jaggeredArray() {
 		setSeparator("Jagged Array");
-		JaggedArray jArr = new JaggedArray();
-		jArr.constructJaggedArray();
-
+		JaggedArray.constructJaggedArray();
 	}
 
 	public static void setSeparator(String msg) {
 		System.out.println("************" + msg +"*****************");
 	}
 
-	private static void printInputArray(int[] arr1, int[] arr2) {
+	public static void printInputArray(int[] arr1, int[] arr2) {
 		System.out.print("[ ");
 		for(int i : arr1)
 			System.out.print(i + " ");
@@ -178,7 +168,7 @@ public class ArraysMain {
 		System.out.println("------------------------");
 	}
 
-	private static void printInputArray(int[] arr) {
+	public static void printInputArray(int[] arr) {
 		System.out.print("[ ");
 		for(int i : arr)
 			System.out.print(i + " ");

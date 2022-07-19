@@ -2,9 +2,11 @@ package DataStructureAlgorithm.Arrays;
 
 public class JaggedArray {
 
-	public void constructJaggedArray() {
+	public static void constructJaggedArray() {
 		
-/*Syntax: 	data_type array_name[][] = new data_type[n][];  //n: no. of rows
+	/*
+	A jagged array is an array of arrays such that member arrays can be of different sizes.
+	Syntax: 	data_type array_name[][] = new data_type[n][];  //n: no. of rows
 		 	array_name[] = new data_type[n1] //n1= no. of colmuns in row-1
 			array_name[] = new data_type[n2] //n2= no. of colmuns in row-2
 			array_name[] = new data_type[n3] //n3= no. of colmuns in row-3
@@ -14,7 +16,7 @@ public class JaggedArray {
                           new int[] {50, 60, 70, 80, 90, 100},
                           new int[] {110, 120}
                               };
-*/
+	*/
 		
 		int[][] myArr = new int[2][];
 		

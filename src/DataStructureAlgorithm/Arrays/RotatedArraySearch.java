@@ -1,7 +1,6 @@
 package DataStructureAlgorithm.Arrays;
 
 public class RotatedArraySearch {
-
     /*
      *Search an element in a sorted and rotated array
      *O(log n)
