@@ -1,4 +1,4 @@
-package ForEachUse;
+package Java8.ForEachUse;
 
 import java.util.function.Consumer;
 

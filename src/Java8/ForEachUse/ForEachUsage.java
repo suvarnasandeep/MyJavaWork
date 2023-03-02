@@ -1,4 +1,4 @@
-package ForEachUse;
+package Java8.ForEachUse;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -8,7 +8,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.function.Consumer;
 
-import org.omg.Messaging.SyncScopeHelper;
+//import org.omg.Messaging.SyncScopeHelper;
 
 import LamdaExpression.Employee;
 
