@@ -1,4 +1,4 @@
-package DeadLock;
+package MultiThreading.DeadLock;
 
 public class DeadlockDemo {
 	public synchronized void method1( DeadlockDemo obj) {

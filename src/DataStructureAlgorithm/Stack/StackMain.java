@@ -9,7 +9,7 @@ public class StackMain {
         //stackImpUsingArray();
         //stackImpUsingLinkedList();
         //queueUsingStack();
-        //stackWithGetMin();
+        stackWithGetMin();
         //stackWithGetMin1();
         //twoStackUsingArray();
         //stackUsingQueue();
@@ -19,7 +19,7 @@ public class StackMain {
         //numberOfNextGreaterElement();
         //reverseNUmber();
 
-        deleteConsecutive();
+        //deleteConsecutive();
     }
 
     private static void deleteConsecutive() {

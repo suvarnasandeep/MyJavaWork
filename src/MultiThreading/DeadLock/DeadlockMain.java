@@ -1,4 +1,4 @@
-package DeadLock;
+package MultiThreading.DeadLock;
 
 public class DeadlockMain {
 

@@ -16,31 +16,31 @@ public class LinkedListMain {
 		obj.printList("LinkedList is : ");
 		
 		//print kth node from end
-		obj.printNodeFromEnd(4);
+		//obj.printNodeFromEnd(4);
 		
 		//insert node at start
-		obj.insertStart(0);		
-		obj.printList("Inserting element 0 at start : ");
+		//obj.insertStart(0);
+		//obj.printList("Inserting element 0 at start : ");
 		
 		//insert node at end
-		obj.insertEnd(6);		
-		obj.printList("Inserting element 6 at end : ");
+		//obj.insertEnd(6);
+		//obj.printList("Inserting element 6 at end : ");
 		
 		//reverse linkedlist
-		obj.reverseList();
-		obj.printList("Reversed LinkedList : ");
+		//obj.reverseList();
+		//obj.printList("Reversed LinkedList : ");
 		
 		//reverse second half of linkedlist
-		obj.reverseSecondHalf();
-		obj.printList("Reversed Second half : ");
+		//obj.reverseSecondHalf();
+		//obj.printList("Reversed Second half : ");
 				
 		//reverse first half of linkedlist
-		obj.reverseFirstHalf();
-		obj.printList("Reversed First half : ");
+		//obj.reverseFirstHalf();
+		//obj.printList("Reversed First half : ");
 		
 		//reverse second half of linkedlist from kth node
-		obj.reverseSecondHalfFromKNode(3);
-		obj.printList("Reversed second half from 3rd element : ");
+		//obj.reverseSecondHalfFromKNode(3);
+		//obj.printList("Reversed second half from 3rd element : ");
 		
 		//reverse first half of linkedlist from kth node
 		obj.reverseFirstHalfFromKNode(3);
@@ -50,7 +50,7 @@ public class LinkedListMain {
 		obj.printList("Inserting element 15 at index 1 : ");
 		
 		//check linkedlist palindrome
-		obj.checkPalindrome();
+		//obj.checkPalindrome();
 		
 		// check loop in linkedlist
 		/*obj.createLoopList(new Node(1));

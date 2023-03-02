@@ -18,7 +18,11 @@ public class RotatedArraySearch {
      */
     public void pivotedBinarySearch(int arr[], int n, int key) {
         printArray(arr);
-        int pivot = findPivot(arr, 0, n-1);
+        int pivot = findPivot1(arr, 0, n-1);
+
+        int[]arr1 = {6,7,1,2,3,4,5};
+        int pivot1 = findPivot1(arr1, 0, n-1);
+
         System.out.println("pivot : " + pivot);
 
         if(pivot == -1)
@@ -60,6 +64,7 @@ public class RotatedArraySearch {
         }
     }
 
+    //O(n)
     public int findPivot(int arr[], int l, int h) {
 
         if(h < l)
@@ -77,6 +82,23 @@ public class RotatedArraySearch {
         } else {
             return findPivot(arr, mid+1, h);
         }
+    }
+
+    //O(lon n)
+    public int findPivot1(int arr[], int low, int high) {
+        while(low < high)
+        {
+            int mid = (low + high) / 2;
+//            int mid = low + (high - low) / 2;
+//            if (arr[mid] == arr[high])
+//                high--;
+//            else
+                if(arr[mid] > arr[high])
+                 low = mid + 1;
+                else
+                 high = mid;
+        }
+        return high;
     }
 
     public int binarySearch(int arr[], int l, int h, int key) {

@@ -1,4 +1,4 @@
-package PrintEvenAndOdd;
+package MultiThreading.PrintEvenAndOdd;
 
 public class PrintNumber{
 
