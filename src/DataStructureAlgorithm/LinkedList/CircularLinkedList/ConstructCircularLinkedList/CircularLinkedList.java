@@ -7,11 +7,42 @@ public class CircularLinkedList {
 	int size = 0;
 	Node head;
 	Node tail;
+
+	public void createCSLL(int val){
+		Node node = new Node(val);
+		head = node;
+		tail = node;
+		node.next = head;
+		size++;
+	}
+
+	public void insertCSLL(int val, int location){
+		Node node = new Node(val);
+		if(head == null){
+			createCSLL(val);
+			return;
+		}
+		if(location == 1){
+			node.next = head;
+			head = node;
+			tail.next = node;
+		} else if(location >= size){
+			tail.next = node;
+			node.next = head;
+			tail = node;
+		} else {
+			Node tmp = head;
+			for(int i=0; i<location-1; i++){
+				tmp = tmp.next;
+			}
+			node.next = tmp.next;
+			tmp.next = node;
+		}
+		size++;
+	}
 	
 	public void insertAtStart(int data) {
-		
 		Node node = new Node(data);
-		
 		if(size ==0){
 			head = node;
 			tail = node;
@@ -26,7 +57,6 @@ public class CircularLinkedList {
 	}
 	
 	public void insertAtEnd(int data) {
-		
 		if(size == 0){
 			insertAtStart(data);
 		} else {
@@ -39,7 +69,6 @@ public class CircularLinkedList {
 	}
 	
 	public void deleteNodeFromStart() {
-		
 		head = head.next;
 		tail.next = head;
 		size--;

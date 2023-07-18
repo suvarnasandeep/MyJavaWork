@@ -8,7 +8,7 @@ public class BinaryTreeMain {
         BinaryTreeTraverse.constructTree();
         //FullBinaryTree.fullBinaryTree();
         //PerfectBinaryTree.perfectBinaryTree();
-        BalancedBinaryTree.balancedBinaryTree();
+        //BalancedBinaryTree.balancedBinaryTree();
 
     }
 }

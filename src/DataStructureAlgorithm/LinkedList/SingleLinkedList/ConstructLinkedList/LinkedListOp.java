@@ -5,9 +5,133 @@ import DataStructureAlgorithm.LinkedList.TestClass;
 
 public class LinkedListOp {
 
-	Node head;
+	static Node head;
 	Node head1;
+	Node tail;
+	int size;
 
+	public static void main(String[] args) {
+		LinkedListOp obj = new LinkedListOp();
+
+//		obj.createSLL(1);
+//		obj.insertSLL(2,0);
+//		obj.insertSLL(3,5);
+//		obj.insertSLL(6,2);
+//		obj.insertSLL(7,1);
+//		obj.printList("SLL");
+
+		//create linkedlist
+		obj.createList(1);
+		obj.createList(2);
+		obj.createList(3);
+		obj.createList(4);
+		obj.createList(5);
+		//obj.createList(6);
+		obj.printList("LinkedList is : ");
+
+		//obj.deleteOnlyNode(head.next.next);
+		obj.rotateListByK(2);
+		obj.printList("list");
+		//obj.deleteNode(2);
+		//obj.deleteKNodefromEnd(4);
+		//obj.printList("LinkedList is : ");
+//
+		//print kth node from end
+		//obj.printNodeFromEnd(4);
+
+		//insert node at start
+		//obj.insertStart(0);
+		//obj.printList("Inserting element 0 at start : ");
+
+		//insert node at end
+		//obj.insertEnd(6);
+		//obj.printList("Inserting element 6 at end : ");
+
+		//reverse linkedlist
+		//obj.reverseList();
+		//obj.printList("Reversed LinkedList : ");
+
+		//reverse second half of linkedlist
+		//obj.reverseSecondHalf();
+		//obj.printList("Reversed Second half : ");
+
+		//reverse first half of linkedlist
+		//obj.reverseFirstHalf();
+		//obj.printList("Reversed First half : ");
+
+		//reverse second half of linkedlist from kth node
+		//obj.reverseSecondHalfFromKNode(3);
+		//obj.printList("Reversed second half from 3rd element : ");
+
+		//reverse first half of linkedlist from kth node
+//		obj.reverseFirstHalfFromKNode(3);
+//		obj.printList("Reversed first half from 3rd element : ");
+//
+//		obj.insertAtK(1, 15);
+//		obj.printList("Inserting element 15 at index 1 : ");
+//
+		//check linkedlist palindrome
+		//obj.checkPalindrome();
+
+		// check loop in linkedlist
+		/*obj.createLoopList(new Node(1));
+		obj.createLoopList(new Node(2));
+		Node loopNode = new Node(3);
+		obj.createLoopList(loopNode);
+		obj.createLoopList(new Node(4));
+		obj.createLoopList(new Node(5));
+		obj.createLoopList(new Node(6));
+		obj.createLoopList(new Node(7));
+		obj.createLoopList(loopNode);
+
+		//obj.printList1("");
+
+		obj.checkLoop();
+		obj.loopStarting();
+		obj.checkLoop();*/
+
+
+	}
+
+	//create single linked list O(1)
+	public void createSLL(int val){
+		Node node = new Node(val);
+		head = node;
+		tail = node;
+		size = 1;
+	}
+
+	//O(N)
+	//insert at beginning - O(1)
+	//insert at end - O(1)
+	//insert at middle - O(N)
+	public void insertSLL(int val, int location){
+		Node node = new Node(val);
+
+		if (head == null) {
+			createSLL(val);
+			return;
+		} else if (location == 0){		//insert at beginning
+			node.next = head;
+			head = node;
+		} else if (location >= size){	//insert at end
+			tail.next = node;
+			tail = node;
+		} else {						//insert at middle
+			Node tmpNode = head;
+			int index=0;
+			while(index < location - 1){
+				tmpNode = tmpNode.next;
+				index++;
+			}
+			Node nextNode = tmpNode.next;
+			tmpNode.next = node;
+			node.next = nextNode;
+		}
+		size++;
+	}
+
+	//O(N)
 	public void createList(int data){
 		Node tmp = head;
 		Node node = new Node(data);
@@ -22,26 +146,16 @@ public class LinkedListOp {
 		}
 	}
 
-	public void printList(String msg){
-		System.out.println(msg);
-		Node tmp = head;
-
-		while(tmp != null){
-			System.out.print(tmp.data + " -> ");
-			tmp = tmp.next;
-		}
-		System.out.println();
-	}
-
+	//O(1)
 	public void insertStart(int data) {
 		Node node = new Node(data);
 		node.next = head;
 		head = node;
 	}
 
+	//O(N)
 	public void insertEnd(int data) {
 		Node tmp = head;
-
 		Node node = new Node(data);
 
 		while(tmp.next != null){
@@ -49,6 +163,31 @@ public class LinkedListOp {
 		}
 
 		tmp.next = node;
+	}
+
+	//O(N)
+	public void insertAtK(int k, int data) {
+		Node firstNode = head;
+		Node node = new Node(data);
+
+		for(int i = 1; i<k; i++){
+			firstNode = firstNode.next;
+		}
+
+		node.next = firstNode.next;
+		firstNode.next = node;
+	}
+
+	private boolean search(int data){
+		Node tmp = head;
+
+		while(tmp != null){
+			if(tmp.data == data){
+				return  true;
+			}
+			tmp = tmp.next;
+		}
+		return  false;
 	}
 
 	public void reverseList() {
@@ -77,7 +216,6 @@ public class LinkedListOp {
 
 		Node secondHalf = firstNode.next;
 		firstNode.next = null;
-
 
 		Node next = null;
 		Node prev = null;
@@ -191,20 +329,45 @@ public class LinkedListOp {
 		res.next = prev;		
 	}
 
-	public void printNodeFromEnd(int n){
-		System.out.println("Element at " + n + "th index from end : ");
-		Node firstNode = head;
-		Node secNode = head;
+	//O(N)
+	public void deleteNode(int position){
+		Node tmp = head;
 
-		for(int i=1; i<n; i++){
-			firstNode = firstNode.next;
+		if(position == 0){
+			head = tmp.next;
+			return;
 		}
 
-		while(firstNode.next != null){
-			firstNode = firstNode.next;
-			secNode = secNode.next;
+		for(int i = 1 ; i < position; i++){
+			tmp = tmp.next;
 		}
-		System.out.println(secNode.data);
+
+		Node node = tmp.next.next;
+		tmp.next = node;
+	}
+
+	//O(N)
+	public void deleteKNodefromEnd(int position){
+		Node node1,node2;
+		node1 = node2 = head;
+		for(int i=0; i<position; i++){
+			node1 = node1.next;
+		}
+		while (node1.next != null){
+			node1 = node1.next;
+			node2 = node2.next;
+		}
+		Node node = node2.next.next;
+		node2.next = node;
+
+
+	}
+
+	//delete node when only node is given
+	//No head given
+	public void deleteOnlyNode(Node node){
+		node.data = node.next.data;
+		node.next = node.next.next;
 	}
 
 	public void checkPalindrome(){
@@ -240,17 +403,6 @@ public class LinkedListOp {
 			}
 		}
 		System.out.println("Linkedlist is palindrome");
-	}
-
-	public void printList1(String msg){
-		System.out.println(msg);
-		Node tmp = head1;
-
-		while(tmp != null){
-			System.out.print(tmp.data + " -> ");
-			tmp = tmp.next;
-		}
-		System.out.println();
 	}
 
 	public void createLoopList(Node node) {
@@ -326,47 +478,6 @@ public class LinkedListOp {
 		}
 	}
 
-	public void insertAtK(int k, int data) {
-
-		Node firstNode = head;	
-		Node node = new Node(data);
-
-		for(int i = 1; i<k; i++){
-			firstNode = firstNode.next;			
-		}
-
-		node.next = firstNode.next;
-		firstNode.next = node;
-	}
-
-	private boolean search(int data){
-		Node tmp = head;
-
-		while(tmp != null){
-			if(tmp.data == data){
-				return  true;
-			}
-			tmp = tmp.next;
-		}
-		return  false;
-	}
-
-	private void deleteNode(int position){
-		Node tmp = head;
-
-		if(position == 0){
-			head = tmp.next;
-		}
-
-		for(int i = 1 ; i < position; i++){
-			tmp = tmp.next;
-		}
-
-		Node node = tmp.next.next;
-		tmp.next = node;
-
-	}
-
 	private void sortList(){
 		Node current = head;
 		Node index;
@@ -387,4 +498,51 @@ public class LinkedListOp {
 		}
 
 	}
+
+	//https://www.youtube.com/watch?v=9VPm6nEbVPA&list=PLgUwDviBIf0r47RKH7fdWN54AbWFgGuii&index=13
+	public void rotateListByK(int k){
+		int len = 0;
+		Node node = head;
+		while (node.next != null){
+			node = node.next;
+			len++;
+		}
+		k= k % len;
+		node.next = head;
+
+		Node tmp = head;
+		for(int i=0; i<len-k;i++){
+			tmp = tmp.next;
+		}
+		head = tmp.next;
+		tmp.next = null;
+	}
+
+	public void printList(String msg){
+		System.out.println(msg);
+		Node tmp = head;
+
+		while(tmp != null){
+			System.out.print(tmp.data + " -> ");
+			tmp = tmp.next;
+		}
+		System.out.println();
+	}
+
+	public void printNodeFromEnd(int n){
+		System.out.println("Element at " + n + "th index from end : ");
+		Node firstNode = head;
+		Node secNode = head;
+
+		for(int i=1; i<n; i++){
+			firstNode = firstNode.next;
+		}
+
+		while(firstNode.next != null){
+			firstNode = firstNode.next;
+			secNode = secNode.next;
+		}
+		System.out.println(secNode.data);
+	}
+
 }
