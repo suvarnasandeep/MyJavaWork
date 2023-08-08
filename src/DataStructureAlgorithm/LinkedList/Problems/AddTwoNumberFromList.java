@@ -55,10 +55,7 @@ public class AddTwoNumberFromList {
     https://www.youtube.com/watch?v=LBVsXSMOIk4&list=PLgUwDviBIf0r47RKH7fdWN54AbWFgGuii&index=6
      */
     public static void main(String[] args) {
-<<<<<<< Updated upstream
-=======
         //sandeep
->>>>>>> Stashed changes
         Node listNode1 = new Node(2);
         listNode1.next = new Node(4);
         listNode1.next.next = new Node(3);
