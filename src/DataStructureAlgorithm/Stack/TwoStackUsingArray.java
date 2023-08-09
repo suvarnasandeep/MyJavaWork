@@ -51,4 +51,29 @@ public class TwoStackUsingArray {
     /*public void printStack(){
         System.out.println(arr);
     }*/
+
+    public static void main(String[] args) {
+        TwoStackUsingArray s = new TwoStackUsingArray(6);
+
+        s.push1(1);
+        s.push1(2);
+        s.push1(3);
+
+        s.push2(11);
+        s.push2(12);
+        s.push2(13);
+        s.push2(21);
+
+        System.out.println("pop - " + s.pop1());
+        System.out.println("pop - " + s.pop1());
+        System.out.println("pop - " + s.pop1());
+        System.out.println("pop - " + s.pop1());
+
+        System.out.println("pop - " + s.pop2());
+        System.out.println("pop - " + s.pop2());
+        System.out.println("pop - " + s.pop2());
+        System.out.println("pop - " + s.pop2());
+        System.out.println("pop - " + s.pop2());
+
+    }
 }

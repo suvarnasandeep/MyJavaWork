@@ -49,4 +49,25 @@ public class StockSpanProblem {
 
         return  span;
     }
+
+    public static void main(String[] args) {
+        StockSpanProblem s = new StockSpanProblem();
+        int [] data = {100, 80,60,70,60,75,85};
+        int[] arr = s.stockSpanBruteForce(data);
+
+        System.out.print("[ ");
+        for(int i=0; i< data.length; i++){
+            System.out.print( arr[i] + " ");
+        }
+        System.out.println("]");
+
+        System.out.println("----------------------------");
+        int[] arr1 = s.stockSpan(data);
+
+        System.out.print("[ ");
+        for(int i=0; i< data.length; i++){
+            System.out.print( arr1[i] + " ");
+        }
+        System.out.println("]");
+    }
 }

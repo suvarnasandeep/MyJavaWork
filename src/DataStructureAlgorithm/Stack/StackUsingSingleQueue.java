@@ -26,4 +26,19 @@ public class StackUsingSingleQueue {
     public void print(){
         System.out.println(q);
     }
+
+    public static void main(String[] args) {
+        StackUsingSingleQueue s = new StackUsingSingleQueue();
+
+        s.push(1);
+        s.push(2);
+        s.push(3);
+        s.push(4);
+        s.print();
+
+        s.pop();
+        s.pop();
+        s.pop();
+        s.pop();
+    }
 }

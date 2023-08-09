@@ -36,4 +36,22 @@ public class QueueUsingStack {
         System.out.println("queue is - " +stack1);
 
     }
+
+    public static void main(String[] args) {
+        QueueUsingStack q = new QueueUsingStack();
+        q.enQueue(1);
+        q.enQueue(2);
+        q.enQueue(3);
+        q.enQueue(4);
+        q.enQueue(5);
+
+        q.printQueue();
+        q.deQueue();
+        q.deQueue();
+        q.deQueue();
+        q.printQueue();
+        q.deQueue();
+        q.deQueue();
+        q.deQueue();
+    }
 }

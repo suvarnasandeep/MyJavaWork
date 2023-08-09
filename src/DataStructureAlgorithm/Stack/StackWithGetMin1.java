@@ -48,4 +48,35 @@ public class StackWithGetMin1 {
     public int getMin(){
         return minEl;
     }
+
+    public static void main(String[] args) {
+        StackWithGetMin1 s = new StackWithGetMin1();
+        s.push(3);
+        s.push(5);
+        s.push(2);
+        s.push(1);
+        s.push(1);
+        s.push(-1);
+
+        System.out.println("[3 5 2 1 1 -1]");
+        System.out.println(s.getMin());
+
+        s.pop();
+        System.out.println(s.getMin());
+
+        s.pop();
+        System.out.println(s.getMin());
+
+        s.pop();
+        System.out.println(s.getMin());
+
+        s.pop();
+        System.out.println(s.getMin());
+
+        s.pop();
+        System.out.println(s.getMin());
+
+        s.pop();
+        System.out.println(s.getMin());
+    }
 }

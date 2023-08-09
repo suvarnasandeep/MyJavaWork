@@ -52,4 +52,25 @@ public class StackImpUsingArray {
     public int peek(){
         return arr[top];
     }
+
+    public static void main(String[] args) {
+        StackImpUsingArray stack = new StackImpUsingArray(6);
+        stack.push(1);
+        stack.push(2);
+        stack.push(3);
+        stack.push(4);
+        System.out.println("peek is - "+ stack.peek());
+        stack.push(5);
+        stack.printStack();
+
+        stack.pop();
+        stack.pop();
+        stack.pop();
+        stack.printStack();
+        stack.pop();
+        System.out.println("peek is - "+ stack.peek());
+        stack.pop();
+
+        stack.pop();
+    }
 }

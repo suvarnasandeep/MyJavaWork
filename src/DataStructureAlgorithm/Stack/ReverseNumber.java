@@ -28,4 +28,10 @@ public class ReverseNumber {
 
         return reverse;
     }
+
+    public static void main(String[] args) {
+        ReverseNumber r = new ReverseNumber();
+        int input = 123456;
+        System.out.println(input + " -- " +r.reverseNumber(input));
+    }
 }

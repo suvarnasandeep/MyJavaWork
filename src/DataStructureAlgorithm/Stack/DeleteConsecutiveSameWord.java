@@ -42,4 +42,13 @@ public class DeleteConsecutiveSameWord {
 
         return s.size();
     }
+
+    public static void main(String[] args) {
+        DeleteConsecutiveSameWord o = new DeleteConsecutiveSameWord();
+
+        String[] input = {"aa", "aa", "aa", "aa","aa","bcd", "ab", "ab"};
+        //String[] input = {"tom", "jerry", "jerry", "tom"};
+
+        System.out.println(o.deleteConsecutiveWord(input));
+    }
 }

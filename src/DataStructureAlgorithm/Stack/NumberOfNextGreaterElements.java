@@ -22,4 +22,19 @@ public class NumberOfNextGreaterElements {
 
         return num;
     }
+
+    public static void main(String[] args) {
+        NumberOfNextGreaterElements obj = new NumberOfNextGreaterElements();
+
+        int[] input = {3,4,2,7,5,8,10,6};
+        int index = 5;
+
+        System.out.print("[ ");
+        for(int a : input){
+            System.out.print(a + " ");
+        }
+        System.out.println(" ]");
+        System.out.println("index : "+ index + " Num NGE : " + obj.getNumberOfGreaterElementsBruteForce(input, index));
+
+    }
 }

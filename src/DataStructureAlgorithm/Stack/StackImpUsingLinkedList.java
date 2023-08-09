@@ -60,4 +60,21 @@ public class StackImpUsingLinkedList {
         }
         System.out.println();
     }
+
+    public static void main(String[] args) {
+        StackImpUsingLinkedList s = new StackImpUsingLinkedList();
+        s.push(1);
+        s.push(2);
+        s.push(3);
+        s.push(4);
+        s.push(5);
+
+        s.printStack();
+
+        s.pop();
+        s.printStack();
+        s.peek();
+        s.pop();
+        s.printStack();
+    }
 }

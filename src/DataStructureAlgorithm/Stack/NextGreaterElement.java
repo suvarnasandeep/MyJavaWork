@@ -50,4 +50,40 @@ public class NextGreaterElement {
 
         return res;
     }
+
+    public static void main(String[] args) {
+        NextGreaterElement ele = new NextGreaterElement();
+
+        //int[] input = {13,7,6,12};
+        int[] input = {4,12,5,3,1,2,5,3,1,2,4,6};
+        int[] res = ele.nextGreaterElementBruteForce(input);
+
+        System.out.print("[ ");
+        for(int a : input){
+            System.out.print(a + " ");
+        }
+        System.out.println(" ]");
+
+        System.out.print("[ ");
+        for(int a : res){
+            System.out.print(a + " ");
+        }
+        System.out.println(" ]");
+
+        System.out.println("---------------------------");
+
+        int[] res1 = ele.nextGreaterElement(input);
+
+        System.out.print("[ ");
+        for(int a : input){
+            System.out.print(a + " ");
+        }
+        System.out.println(" ]");
+
+        System.out.print("[ ");
+        for(int a : res1){
+            System.out.print(a + " ");
+        }
+        System.out.println(" ]");
+    }
 }
