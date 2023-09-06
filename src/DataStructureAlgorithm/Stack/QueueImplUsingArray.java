@@ -1,13 +1,13 @@
-package DataStructureAlgorithm.Queue.simpleQueue;
+package DataStructureAlgorithm.Stack;
 
-public class Queue {
+public class QueueImplUsingArray {
 
     private Integer[] arr;
     private int front;
     private int rear;
     private int size;
 
-    public Queue(int size) {
+    public QueueImplUsingArray(int size) {
         this.size = size;
         arr = new Integer[size];
         front = -1;
@@ -55,5 +55,25 @@ public class Queue {
             System.out.print(arr[i] + " ");
         }
         System.out.println("]");
+    }
+
+    public static void main(String[] args) {
+        QueueImplUsingArray queue = new QueueImplUsingArray(5);
+
+        queue.enqueue(1);
+        queue.enqueue(3);
+        queue.enqueue(4);
+        queue.enqueue(5);
+        queue.enqueue(6);
+        queue.enqueue(7);
+
+        queue.printQueue();
+
+        queue.deQueue();
+        queue.deQueue();
+        //queue.deQueue();
+        queue.deQueue();
+
+        queue.printQueue();
     }
 }

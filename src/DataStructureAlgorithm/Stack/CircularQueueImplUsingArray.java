@@ -1,12 +1,12 @@
-package DataStructureAlgorithm.Queue.circularQueue;
+package DataStructureAlgorithm.Stack;
 
-public class CircularQueue {
+public class CircularQueueImplUsingArray {
 
     private int [] arr;
     private  int size;
     private int front, rear;
 
-    public CircularQueue(int size) {
+    public CircularQueueImplUsingArray(int size) {
         this.size = size;
         arr = new int[size];
         front = -1;
@@ -58,5 +58,25 @@ public class CircularQueue {
             System.out.print(arr[i] + " ");
         }
         System.out.println("]");
+    }
+
+    public static void main(String[] args) {
+        CircularQueueImplUsingArray circularQueue = new CircularQueueImplUsingArray(4);
+
+        circularQueue.enQueue(1);
+        circularQueue.enQueue(2);
+        circularQueue.enQueue(3);
+        circularQueue.enQueue(4);
+        circularQueue.enQueue(5);
+
+        circularQueue.printQueue();
+
+        circularQueue.deQueue();
+        circularQueue.deQueue();
+
+        circularQueue.printQueue();
+
+        circularQueue.enQueue(10);
+        circularQueue.printQueue();
     }
 }

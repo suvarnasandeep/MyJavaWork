@@ -2,7 +2,7 @@ package DataStructureAlgorithm.Stack;
 
 import java.util.Stack;
 
-public class QueueUsingStack {
+public class QueueImplUsingStack {
 
     Stack stack1 = new Stack();
     Stack stack2 = new Stack();
@@ -38,7 +38,7 @@ public class QueueUsingStack {
     }
 
     public static void main(String[] args) {
-        QueueUsingStack q = new QueueUsingStack();
+        QueueImplUsingStack q = new QueueImplUsingStack();
         q.enQueue(1);
         q.enQueue(2);
         q.enQueue(3);

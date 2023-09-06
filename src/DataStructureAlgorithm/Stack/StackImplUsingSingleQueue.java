@@ -3,7 +3,7 @@ package DataStructureAlgorithm.Stack;
 import java.util.LinkedList;
 import java.util.Queue;
 
-public class StackUsingSingleQueue {
+public class StackImplUsingSingleQueue {
 
     Queue q = new LinkedList();
 
@@ -28,7 +28,7 @@ public class StackUsingSingleQueue {
     }
 
     public static void main(String[] args) {
-        StackUsingSingleQueue s = new StackUsingSingleQueue();
+        StackImplUsingSingleQueue s = new StackImplUsingSingleQueue();
 
         s.push(1);
         s.push(2);
