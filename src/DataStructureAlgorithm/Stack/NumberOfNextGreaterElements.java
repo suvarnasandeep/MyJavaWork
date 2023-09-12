@@ -27,7 +27,7 @@ public class NumberOfNextGreaterElements {
         NumberOfNextGreaterElements obj = new NumberOfNextGreaterElements();
 
         int[] input = {3,4,2,7,5,8,10,6};
-        int index = 5;
+        int index = 2;
 
         System.out.print("[ ");
         for(int a : input){
