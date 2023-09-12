@@ -7,6 +7,7 @@ Output: [2,-1,2]
 Explanation: The first 1's next greater number is 2;
 The number 2 can't find next greater number.
 The second 1's next greater number needs to search circularly, which is also 2.
+https://www.youtube.com/watch?v=Du881K7Jtk8&list=PLgUwDviBIf0oSO572kQ7KCSvCUh1AdILj&index=7
 https://takeuforward.org/data-structure/next-greater-element-using-stack/
  */
 public class NextGreaterElement {
