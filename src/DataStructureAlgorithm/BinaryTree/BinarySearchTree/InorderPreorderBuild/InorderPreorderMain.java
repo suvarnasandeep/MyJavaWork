@@ -1,4 +1,4 @@
-package DataStructureAlgorithm.BinarySearchTree.InorderPreorderBuild;
+package DataStructureAlgorithm.BinaryTree.BinarySearchTree.InorderPreorderBuild;
 
 public class InorderPreorderMain {
 	

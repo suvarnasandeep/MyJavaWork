@@ -1,4 +1,4 @@
-package DataStructureAlgorithm.BinarySearchTree;
+package DataStructureAlgorithm.BinaryTree.BinarySearchTree;
 
 public class ConvertSortedArrayToBST {
 

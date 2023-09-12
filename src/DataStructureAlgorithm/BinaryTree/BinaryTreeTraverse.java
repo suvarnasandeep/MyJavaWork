@@ -83,7 +83,7 @@ public class BinaryTreeTraverse {
         }
     }
 
-    //inOrder using stack
+    //inOrder using stack - iterative method
     private static void inOrderUsingStack(Node root){
         if(root == null)
             return;
@@ -100,5 +100,9 @@ public class BinaryTreeTraverse {
             System.out.print( cur.key + " ");
             cur = cur.right;
         }
+    }
+
+    public static void main(String[] args) {
+        constructTree();
     }
 }

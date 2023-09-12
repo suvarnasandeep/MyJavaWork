@@ -2,7 +2,8 @@ package DataStructureAlgorithm.BinaryTree;
 
 public class FullBinaryTree {
     /*
-    A full Binary tree is a special type of binary tree in which every parent node/internal node has either two or no children.
+    A full Binary tree is a special type of binary tree in which every parent node/internal
+    node has either two or no children.
                 18
               /     \
              40       30

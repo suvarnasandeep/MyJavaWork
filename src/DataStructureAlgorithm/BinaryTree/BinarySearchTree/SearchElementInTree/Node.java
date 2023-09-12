@@ -1,4 +1,4 @@
-package DataStructureAlgorithm.BinarySearchTree.SearchElementInTree;
+package DataStructureAlgorithm.BinaryTree.BinarySearchTree.SearchElementInTree;
 
 public class Node {
 

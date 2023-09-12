@@ -1,8 +1,6 @@
-package DataStructureAlgorithm.BinarySearchTree.Test;
+package DataStructureAlgorithm.BinaryTree.BinarySearchTree;
 
-import DataStructureAlgorithm.BinarySearchTree.Node;
-
-public class TestMain {
+public class _BinarySearchTreeTest {
     static Node root;
 
     public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package DataStructureAlgorithm.BinarySearchTree.SearchElementInTree;
+package DataStructureAlgorithm.BinaryTree.BinarySearchTree.SearchElementInTree;
 
 public class SearchElement {
 	public static boolean isPresent(Node root, int x) {

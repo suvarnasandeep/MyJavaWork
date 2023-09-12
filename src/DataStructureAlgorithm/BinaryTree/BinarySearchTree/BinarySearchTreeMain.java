@@ -1,8 +1,4 @@
-package DataStructureAlgorithm.BinarySearchTree;
-
-import java.util.LinkedList;
-import java.util.Queue;
-import java.util.Stack;
+package DataStructureAlgorithm.BinaryTree.BinarySearchTree;
 
 public class BinarySearchTreeMain {
     public static void main(String[] args) {
