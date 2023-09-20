@@ -2,7 +2,8 @@ package DataStructureAlgorithm.BinaryTree;
 
 public class PerfectBinaryTree {
     /*
-    A perfect binary tree is a type of binary tree in which every internal node has exactly two child nodes and all the leaf nodes are at the same level.
+    A perfect binary tree is a type of binary tree in which every internal node has
+    exactly two child nodes and all the leaf nodes are at the same level.
               18
            /       \
          15         30
