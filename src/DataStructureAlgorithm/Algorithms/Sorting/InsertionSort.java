@@ -9,7 +9,6 @@ public class InsertionSort {
      **/
     public static void doInsertionSort(int[] input){
         int n = input.length;
-
         for(int i = 1; i < n; i++){
             int key = input[i];
             int j = i-1;
@@ -18,8 +17,22 @@ public class InsertionSort {
                 j--;
             }
             input[j+1] = key;
-
         }
     }
+    public static void main(String[] args) {
+        int[] input = {15,3,10,52,8,36};
+        printInput(input);
+        InsertionSort.doInsertionSort(input);
+        printInput(input);
+    }
+    public static  void printInput(int[] input){
+        for(int i : input){
+            System.out.print(i + " ");
+        }
+        System.out.println();
+    }
 
+    public static void test(int[]arr){
+
+    }
 }

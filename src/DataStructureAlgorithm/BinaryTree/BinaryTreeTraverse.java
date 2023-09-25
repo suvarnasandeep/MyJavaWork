@@ -11,6 +11,8 @@ public class BinaryTreeTraverse {
                   11  9
                  /\   /\
                 7  6 15  8
+               /
+              55
 */
 
     static int DIA = 0;
@@ -69,6 +71,13 @@ public class BinaryTreeTraverse {
         System.out.println("Deepest node : " + deepestNode(root));
 
         System.out.println("Number of full nodes : " + numberOfFullNode(root));
+
+        int[] arr = new int[1];
+        arr[0] = Integer.MIN_VALUE;
+        maxPathSum(root, arr);
+        System.out.println("Max path sum : "+arr[0]);
+
+        System.out.println("Max level sum : " + maxLevelSum(root));
 
     }
 
@@ -449,5 +458,42 @@ public class BinaryTreeTraverse {
         return (root1.key == root2.key) &&
                 isSameTree(root1.left, root2.left) &&
                 isSameTree(root1.right, root2.right);
+    }
+
+    //https://www.youtube.com/watch?v=WszrfSwMz58&list=PLgUwDviBIf0q8Hkd7bK2Bpryj2xVJk8Vk&index=18
+    public static int maxPathSum(Node root, int[] max){
+        if(root == null)
+            return 0;
+        int lh = Math.max(0, maxPathSum(root.left, max));
+        int rh = Math.max(0, maxPathSum(root.right, max));
+        max[0] = Math.max(max[0], lh+rh+root.key);
+        return Math.max(lh,rh) + root.key;
+    }
+
+    public static int maxLevelSum(Node root){
+        Queue<Node> queue = new LinkedList<>();
+        int max = 0;
+        int maxRet = Integer.MIN_VALUE;
+        if(root == null)
+            return 0;
+        queue.add(root);
+        queue.add(null);
+        while (!queue.isEmpty()){
+            Node tmp = queue.poll();
+
+            if(tmp == null){
+                if(!queue.isEmpty())
+                    queue.add(null);
+                maxRet = Math.max(max,maxRet);
+                max = 0;
+            } else {
+                max = max+tmp.key;
+                if(tmp.left!= null)
+                    queue.add(tmp.left);
+                if(tmp.right != null)
+                    queue.add(tmp.right);
+            }
+        }
+        return maxRet;
     }
 }
