@@ -46,4 +46,12 @@ public class NonRepeatingElement {
         }
         return  res;
     }
+
+    public static void main(String[] args) {
+        int [] input = {1,2,4,2,7,4,1,9};
+        NonRepeatingElement obj = new NonRepeatingElement();
+
+        System.out.println(obj.getNonRepeatingElement(input));
+        //System.out.println(obj.getNonRepeatingElement1(input));
+    }
 }

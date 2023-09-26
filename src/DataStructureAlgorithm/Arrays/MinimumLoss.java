@@ -46,4 +46,13 @@ public class MinimumLoss {
         }
         return min;
     }
+
+    public static void main(String[] args) {
+        int[] input = {16,15,8,2,11};
+        Utils.printArray(input);
+        MinimumLoss o = new MinimumLoss();
+        System.out.println("Min Loss BF : "+ o.getMinLossBF(input));
+        System.out.println("Min Loss : "+ o.getMinLoss(input));
+
+    }
 }

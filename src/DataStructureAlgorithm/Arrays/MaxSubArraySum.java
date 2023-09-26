@@ -75,4 +75,12 @@ public class MaxSubArraySum {
     max_ending_here = max_ending_here + (-3)
     max_ending_here = 4
      */
+
+    public static void main(String[] args) {
+        int arr[] = {-2,-3,4,-1,-2,1,5,-3};
+        //int arr[] = {-2,1,-3,4,-1,2,1,-5,4};
+        //int arr[] = {5,4,-1,7,8};
+        MaxSubArraySum obj = new MaxSubArraySum();
+        System.out.println(obj.getMaxSubArraySum(arr));
+    }
 }

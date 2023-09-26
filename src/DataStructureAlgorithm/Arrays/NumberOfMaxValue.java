@@ -20,4 +20,13 @@ public class NumberOfMaxValue {
         return map.get(max);
 
     }
+
+    public static void main(String[] args) {
+        int[] input = {3,4,1,5,1,5,4};
+        Utils.printArray(input);
+
+        NumberOfMaxValue m = new NumberOfMaxValue();
+        System.out.println("Number of max val : " + m.getNumberOfMAxValue(input));
+
+    }
 }

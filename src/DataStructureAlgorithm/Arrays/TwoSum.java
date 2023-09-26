@@ -44,4 +44,16 @@ public class TwoSum {
         }
         return list;
     }
+
+    public static void main(String[] args) {
+        int[] input = {16,8,23,4,15};
+        //int[] input = {2,7,11,15};
+        int target = 19;
+
+        Utils.printArray(input);
+        TwoSum obj = new TwoSum();
+        System.out.println(obj.getTwoSum(input, target));
+        System.out.println(obj.getTwoSumHash(input, target));
+
+    }
 }

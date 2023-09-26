@@ -41,7 +41,7 @@ public class NumberOfPairs {
     }
 
     public  int getNumberOfPairsBF(int[] input, int target){
-        printInputArray(input);
+        Utils.printArray(input);
         int res = 0;
         Arrays.sort(input);
 
@@ -55,14 +55,12 @@ public class NumberOfPairs {
         return res;
     }
 
-    private void printInputArray(int[] arr) {
-        System.out.print("[ ");
-        for(int i : arr)
-            System.out.print(i + " ");
-
-        System.out.println("]");
-
-
+    public static void main(String[] args) {
+        int[] arr = {1,5,3,4,2};
+        NumberOfPairs n = new NumberOfPairs();
+        int target = 1;
+        System.out.println("Number of pairs : " + n.getNumberOfPairs(arr, target));
+        System.out.println("Number of pairs : " + n.getNumberOfPairsBF(arr, target));
 
     }
 }

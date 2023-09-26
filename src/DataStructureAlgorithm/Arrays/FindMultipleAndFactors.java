@@ -113,5 +113,15 @@ public class FindMultipleAndFactors {
         return getGCD(b, a%b);
     }
 
+    public static void main(String[] args) {
+        int[] a = {2,6};
+        int[] b = {24,36};
 
+        FindMultipleAndFactors obj = new FindMultipleAndFactors();
+        Utils.printArray(a,b);
+        System.out.println("Brute Force : "+obj.getMultipleAndFactorsBF(a,b));
+
+        System.out.println("Efficient Sol :" +obj.getMultipleAndFactors(a,b));
+
+    }
 }

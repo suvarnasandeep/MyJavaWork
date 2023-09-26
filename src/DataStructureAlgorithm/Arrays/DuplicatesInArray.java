@@ -8,7 +8,7 @@ import java.util.Map;
 public class DuplicatesInArray {
 
     //O(n)
-    public List getDuplicates(int[] arr){
+    public static List getDuplicates(int[] arr){
         List<Integer> list= new ArrayList<>();
         Map<Integer, Integer> map = new HashMap<>();
 
@@ -24,7 +24,7 @@ public class DuplicatesInArray {
     }
 
     // 1<= num[i] <= n
-    public List getDuplicates1(int[] arr){
+    public static List getDuplicates1(int[] arr){
         List<Integer> list = new ArrayList<>();
 
         for(int i=0; i<=arr.length-1; i++){
@@ -37,5 +37,14 @@ public class DuplicatesInArray {
             }
         }
         return list;
+    }
+
+    public static void main(String[] args) {
+        int[] input = {4,3,2,8,2,3,1,7};
+        //int[] input = {2,7,11,15};
+
+        Utils.printArray(input);
+        System.out.println("Duplicate vale : "+ getDuplicates(input));
+        System.out.println("Duplicate vale : "+ getDuplicates1(input));
     }
 }

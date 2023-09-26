@@ -89,4 +89,13 @@ public class EqualStack {
         System.out.println("------------------------");
     }
 
+    public static void main(String[] args) {
+        int[] arr1 = {3,2,1,1,2};
+        int[] arr2 = {4,3, 3};
+        int[] arr3 = {1,1,4,2};
+
+        EqualStack s = new EqualStack();
+        System.out.println("Equal stack : " + s.getEqualStack(arr1,arr2,arr3));
+
+    }
 }

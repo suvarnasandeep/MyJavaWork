@@ -28,4 +28,11 @@ public class EqualDistribute {
 
         return Arrays.stream(possibility).min().getAsInt();
     }
+
+    public static void main(String[] args) {
+            int[] input = {11,6,8,7};
+            Utils.printArray(input);
+            EqualDistribute obj = new EqualDistribute();
+            System.out.println("Equal Distribution : "+ obj.getEqualDistribution(input));
+    }
 }

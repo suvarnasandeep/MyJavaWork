@@ -120,4 +120,14 @@ public class RotatedArraySearch {
         }
         System.out.println();
     }
+
+    public static void main(String[] args) {
+        Utils.setSeparator("Search an element in a sorted and rotated array");
+        RotatedArraySearch rArr = new RotatedArraySearch();
+        int[]arr = {3,4,5,6,7,1,2};
+        int length = arr.length;
+        rArr.pivotedBinarySearch(arr, length, 5);
+        System.out.println("Modified Binary serach : " + rArr.modifiedBinarySearch(arr,5,0, arr.length-1));
+
+    }
 }
