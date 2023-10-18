@@ -7,7 +7,7 @@ public class Utils {
             System.out.print(i + " ");
 
         System.out.println("]");
-        System.out.println("------------------------");
+        //System.out.println("------------------------");
     }
 
     public static void printArray(int[] arr1, int[] arr2) {

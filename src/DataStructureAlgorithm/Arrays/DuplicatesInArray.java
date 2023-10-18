@@ -1,9 +1,6 @@
 package DataStructureAlgorithm.Arrays;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 public class DuplicatesInArray {
 
@@ -39,12 +36,23 @@ public class DuplicatesInArray {
         return list;
     }
 
+    /*
+    O(N)
+     */
+    public static Set<Integer> removeDuplicates(int[] arr){
+        Set<Integer> set = new LinkedHashSet<>();
+        for (int a : arr){
+            set.add(a);
+        }
+        return set;
+    }
     public static void main(String[] args) {
         int[] input = {4,3,2,8,2,3,1,7};
         //int[] input = {2,7,11,15};
 
         Utils.printArray(input);
-        System.out.println("Duplicate vale : "+ getDuplicates(input));
-        System.out.println("Duplicate vale : "+ getDuplicates1(input));
+        //System.out.println("Duplicate vale : "+ getDuplicates(input));
+        //System.out.println("Duplicate vale : "+ getDuplicates1(input));
+        System.out.println(removeDuplicates(input));
     }
 }

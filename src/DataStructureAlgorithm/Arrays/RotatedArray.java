@@ -13,7 +13,7 @@ public class RotatedArray {
 		int[] tmp = new int[d];
 		int n = arr.length;
 		System.out.println("--------------------");
-		printArray(arr);
+		Utils.printArray(arr);
 
 		for(int i=0; i<d; i++){
 			tmp[i] = arr[i];
@@ -26,7 +26,7 @@ public class RotatedArray {
 		for(int k = n-d, l=0; k<n; k++, l++){
 			arr[k] = tmp[l];
 		}
-		printArray(arr);
+		Utils.printArray(arr);
 		System.out.println("--------------------");
 	}
 
@@ -34,7 +34,7 @@ public class RotatedArray {
 	 Time Complexity : O(n)
 	 */
 	public static void rotateArrayLeft(int[]arr, int d) {
-		printArray(arr);
+		Utils.printArray(arr);
 		int n = arr.length;
 		if(d==0)
 			return;
@@ -50,7 +50,7 @@ public class RotatedArray {
 		reverseArr(arr, d, n-1);
 		reverseArr(arr, 0, n-1);
 		
-		printArray(arr);
+		Utils.printArray(arr);
 
 		/* second approach
 		d=3
@@ -78,7 +78,7 @@ public class RotatedArray {
 	 */
 	public static void rotateArrayRight(int[] arr, int d){
 		int n = arr.length;
-		printArray(arr);
+		Utils.printArray(arr);
 		if(d==0)
 			return;
 
@@ -90,7 +90,7 @@ public class RotatedArray {
 		reverseArr(arr, 0,n-1);
 
 
-		printArray(arr);
+		Utils.printArray(arr);
 
 	}
 	
@@ -105,21 +105,54 @@ public class RotatedArray {
 		}
 	}
 
-	public static void printArray(int[] arr) {
-		for(int i = 0; i < arr.length; i++) {
-			System.out.print(arr[i] + " ");
-		}
-		System.out.println();
-	}
-
 	public static void main(String[] args) {
-		Utils.setSeparator("Array Rotation by N");
 		int[]arr = {1,2,3,4,5,6};
 
-		RotatedArray.rotateArrayLeftBF(arr, 2);
-		RotatedArray.rotateArrayLeft(arr, 2);
-		System.out.println("------------------");
-		RotatedArray.rotateArrayRight(arr, 7);
+		//RotatedArray.rotateArrayLeftBF(arr, 2);
+		//RotatedArray.rotateArrayLeft(arr, 2);
+		//System.out.println("------------------");
+		//RotatedArray.rotateArrayRight(arr, 7);
+
+		//test(arr, 2);
+		testleft(arr,3);
+	}
+	//*******************Test********************
+	public static void test(int[] arr, int d){
+		Utils.printArray(arr);
+		int[] tmp = new int[d];
+		for(int i=0; i<d; i++){
+			tmp[i] = arr[i];
+		}
+		for (int j =0; j<arr.length-d; j++){
+			arr[j] = arr[j + d];
+		}
+		for (int k= arr.length -d, l = 0; k< arr.length; k++, l++){
+			arr[k] = tmp[l];
+		}
+		Utils.printArray(arr);
+	}
+
+	public static void testleft(int[] arr, int d){
+		Utils.printArray(arr);
+		if(d == 0){
+			return;
+		}
+
+		int n = d% arr.length;
+		reverse(arr, 0, n-1);
+		reverse(arr, n, arr.length-1);
+		reverse(arr, 0, arr.length-1);
+		Utils.printArray(arr);
+	}
+
+	private static void reverse(int[] arr, int start, int end) {
+		while (start < end){
+			int tmp = arr[start];
+			arr[start] = arr[end];
+			arr[end] = tmp;
+			start++;
+			end--;
+		}
 	}
 
 }
