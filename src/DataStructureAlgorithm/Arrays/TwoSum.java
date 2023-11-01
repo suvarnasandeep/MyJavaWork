@@ -11,10 +11,9 @@ Ex: 2,7,11,15  target - 9
  */
 public class TwoSum {
 
+    //O(n2)
     public List getTwoSum(int[] arr, int target){
         List<Integer> list = new ArrayList<>();
-
-       // Arrays.sort(arr);
 
         for(int j=0; j<arr.length; j++ ){
             for(int k=j+1; k<arr.length; k++){
@@ -55,5 +54,39 @@ public class TwoSum {
         System.out.println(obj.getTwoSum(input, target));
         System.out.println(obj.getTwoSumHash(input, target));
 
+        System.out.println(getTwoSUmTest(input, target));
+        System.out.println(getTwoSUmTest1(input, target));
+    }
+
+    //***********************************************
+    private static List getTwoSUmTest1(int[] input, int target) {
+    List<Integer> list = new ArrayList<>();
+    Map<Integer, Integer> map = new HashMap<>();
+
+    for (int i=0; i<input.length; i++){
+        int val = target - input[i];
+        if(map.containsKey(val)){
+            list.add(map.get(val));
+            list.add(i);
+        } else {
+            map.put(input[i],i);
+        }
+    }
+
+    return list;
+    }
+
+    public static List getTwoSUmTest(int[] arr, int target){
+        List<Integer> list = new ArrayList<>();
+        for (int i = 0; i< arr.length; i++){
+            for (int j=i+1; j<arr.length; j++){
+               if(arr[i] == target-arr[j]){
+                   list.add(i);
+                   list.add(j);
+                   break;
+               }
+            }
+        }
+        return list;
     }
 }
