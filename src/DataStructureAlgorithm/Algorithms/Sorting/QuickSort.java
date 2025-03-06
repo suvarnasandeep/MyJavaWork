@@ -49,7 +49,8 @@ public class QuickSort {
         int[] input = new int[]{25, 2, 9, 50, 8, 1};
         printInput(input);
         //QuickSort.doQuickSort(input);
-        test(input, 0, input.length-1);
+        //test(input, 0, input.length-1);
+        quickSortTest(input, 0, input.length-1);
         printInput(input);
     }
     public static  void printInput(int[] input){
@@ -61,11 +62,11 @@ public class QuickSort {
 
     //*********************Test*********************//
     private static void test(int[] input, int low, int high) {
-    if(low >= high)
-        return;
-    int partition = partition(input, low, high);
-    test(input, low, partition-1);
-    test(input, partition+1, high);
+        if(low < high){
+            int partition = partition(input, low, high);
+            test(input, low, partition-1);
+            test(input, partition+1, high);
+        }
     }
 
     private static int partition(int[] arr, int low, int high) {
@@ -80,6 +81,30 @@ public class QuickSort {
         }
         i++;
         swap(arr, i, high);
+        return i;
+    }
+
+    private static void quickSortTest(int[] arr, int l, int h){
+        if(l < h){
+            int partition = getPartition(arr, l, h);
+            quickSortTest(arr, l, partition-1 );
+            quickSortTest(arr, partition+1, h);
+        }
+    }
+
+    private static int getPartition(int[] arr, int l, int h) {
+        int pivot = arr[h];
+        int i = l-1;
+
+        for(int j=l; j<h; j++){
+            if(arr[j] < pivot){
+                i++;
+                swap(arr, i, j);
+            }
+        }
+
+        i++;
+        swap(arr, i,h);
         return i;
     }
 }

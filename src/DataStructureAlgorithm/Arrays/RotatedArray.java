@@ -1,7 +1,5 @@
 package DataStructureAlgorithm.Arrays;
 
-import jdk.jshell.execution.Util;
-
 public class RotatedArray {
 	/*
 	 *Write a function rotate(ar[], d, n) that rotates arr[] of size n by d elements left direction.
