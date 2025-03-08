@@ -22,18 +22,17 @@ public class TestClass {
 
     public static void main(String[] args) {
         TestClass obj = new TestClass();
-        //        TestClass obj = new TestClass();
-//        obj.createList(1);
-//        obj.createList(2);
-//        obj.createList(3);
-//        obj.createList(4);
-//        obj.createList(5);
-//        obj.createList(4);
-//        obj.createList(3);
-//        obj.createList(2);
-//        obj.createList(1);
+        obj.createList(1);
+        obj.createList(2);
+        obj.createList(3);
+        obj.createList(4);
+        obj.createList(5);
+        obj.createList(4);
+        obj.createList(3);
+        obj.createList(2);
+        obj.createList(1);
 
-        //obj.printList();
+        obj.printList();
 
         //obj.reverse();
 
