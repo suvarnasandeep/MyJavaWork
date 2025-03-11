@@ -1,5 +1,7 @@
 package DataStructureAlgorithm.LinkedList;
 
+import DataStructureAlgorithm.LinkedList.Node.Node;
+
 import java.util.HashMap;
 import java.util.Map;
 
@@ -17,9 +19,6 @@ public class TestClass {
         }
     }
 
-
-
-
     public static void main(String[] args) {
         TestClass obj = new TestClass();
         obj.createList(1);
@@ -27,11 +26,19 @@ public class TestClass {
         obj.createList(3);
         obj.createList(4);
         obj.createList(5);
-        obj.createList(4);
+        obj.createList(6);
+        //obj.createList(7);
+        /*obj.createList(4);
         obj.createList(3);
         obj.createList(2);
-        obj.createList(1);
+        obj.createList(1);*/
 
+        obj.printList();
+        obj.reverseList();
+        obj.printList();
+        obj.reverseListSecondHalf();
+        obj.printList();
+        obj.reverseListFirstHalf();
         obj.printList();
 
         //obj.reverse();
@@ -66,6 +73,52 @@ public class TestClass {
 //        obj.sortList();
 //        obj.printList();
 
+    }
+
+    private void reverseListFirstHalf() {
+    }
+
+    private void reverseListSecondHalf() {
+        Node fastNode = head;
+        Node sloNode = head;
+        while (fastNode != null && fastNode.next != null){
+            fastNode = fastNode.next.next;
+            sloNode = sloNode.next;
+        }
+
+        Node secondhalf = sloNode;
+        //sloNode.next = null;
+
+        Node prev = null;
+        Node next = null;
+        Node cur = secondhalf;
+        while (cur != null){
+            next = cur.next;
+            cur.next = prev;
+            prev = cur;
+            cur = next;
+        }
+
+        sloNode.next = prev;
+
+        /*Node tmp = head;
+        while (tmp.next != null)
+            tmp = tmp.next;
+        tmp.next = prev;*/
+    }
+
+    private void reverseList() {
+        Node cur = head;
+        Node prev = null;
+        Node next = null;
+        while (cur !=null){
+            next = cur.next;
+            cur.next = prev;
+
+            prev = cur;
+            cur = next;
+        }
+        head = prev;
     }
 
     private void isPalindrome() {

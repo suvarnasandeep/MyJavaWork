@@ -30,7 +30,7 @@ public class LinkedListOp {
 		obj.printList("LinkedList is : ");
 
 		//obj.deleteOnlyNode(head.next.next);
-		obj.rotateListByK(2);
+		obj.rotateListByK(3);
 		obj.printList("list");
 		//obj.deleteNode(2);
 		//obj.deleteKNodefromEnd(4);
