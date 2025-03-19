@@ -1,32 +1,19 @@
 package LeetCode;
 
+import LeetCode.Utils.LinkedListBuilder;
+import LeetCode.Utils.ListNode;
+
+import java.util.Arrays;
+
 public class MergeTwoSortedList {
-    public static class ListNode {
-        int val;
-        ListNode next;
 
-        public ListNode(){
-
-        }
-        public ListNode(int val) {
-            this.val = val;
-            this.next = null;
-        }
-    }
     public static void main(String[] args) {
-        ListNode list1 = new ListNode(1);
-        list1.next = new ListNode(2);
-        list1.next.next = new ListNode(4);
+        ListNode list1 = LinkedListBuilder.createSLL(Arrays.asList(1,2,4));
+        ListNode list2 = LinkedListBuilder.createSLL(Arrays.asList(1,3,4));
+        LinkedListBuilder.printList(list1);
+        LinkedListBuilder.printList(list2);
 
-        ListNode list2 = new ListNode(1);
-        list2.next = new ListNode(3);
-        list2.next.next = new ListNode(4);
-
-        printList(list1);
-        printList(list2);
-
-        ListNode mList = mergeLists(list1,list2);
-        printList(mList);
+        LinkedListBuilder.printList(mergeLists(list1,list2));
     }
 
     public static ListNode mergeLists(ListNode list1, ListNode list2){
@@ -49,12 +36,4 @@ public class MergeTwoSortedList {
         return head.next;
     }
 
-    private static void printList(ListNode list) {
-        ListNode tmp = list;
-        while (list != null){
-            System.out.print(list.val + "->");
-            list = list.next;
-        }
-        System.out.println();
-    }
 }
