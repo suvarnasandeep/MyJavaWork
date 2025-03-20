@@ -20,6 +20,7 @@ public class LinkedListBuilder {
             }
         }
 
+        printList(head);
         return head;
     }
 
