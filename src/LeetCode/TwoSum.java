@@ -33,8 +33,8 @@ public class TwoSum {
         for (int i=0; i<nums.length; i++){
             int num = nums[i];
             if(map.containsKey(target-num)){
-                list.add(i);
-                list.add(map.get(target-num));
+                list.add(i+1);
+                list.add(map.get(target-num)+1);
             } else {
                 map.put(nums[i], i);
             }
