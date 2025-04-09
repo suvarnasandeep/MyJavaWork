@@ -12,21 +12,17 @@ public class StackWithGetMin extends Stack {
 
     public void push(int data){
         super.push(data);
-        if(stack.isEmpty()){
+
+        if(stack.isEmpty() || data <= stack.peek())
             stack.push(data);
-        } else {
-            int val = stack.peek();
-            if(data <= val) {
-                stack.push(data);
-            } else {
-                stack.push(val);
-            }
-        }
     }
 
     public Object pop(){
-        stack.pop();
-        return super.pop();
+        int pop = (int) super.pop();
+
+        if(pop == stack.peek())
+            stack.pop();
+        return pop;
     }
 
     public int getMin(){
@@ -40,9 +36,9 @@ public class StackWithGetMin extends Stack {
 
         s.push(10);
         s.push(29);
-        s.push(25);
+        s.push(9);
         s.push(21);
-        s.push(12);
+        s.push(8);
         s.push(60);
 
         System.out.println(s);
