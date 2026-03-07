@@ -2,7 +2,7 @@ package Builder;
 
 public class main {
     public static void main(String[] args) {
-        ProductBuilderBeanImpl builder = new ProductBuilderBeanImpl();
+        ProductBuilderBean builder = new ProductBuilderBeanImpl();
         Product p = builder.create()
                 .withNAme("sandeep")
                 .withUser("suvarna")

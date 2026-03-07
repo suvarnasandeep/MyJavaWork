@@ -1,4 +1,6 @@
-package ProducerConsumer;
+package MultiThreading.ProducerConsumer;
+
+import MultiThreading.ProducerConsumer.Message;
 
 import java.util.concurrent.BlockingQueue;
 

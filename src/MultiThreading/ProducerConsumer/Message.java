@@ -1,4 +1,4 @@
-package ProducerConsumer;
+package MultiThreading.ProducerConsumer;
 
 
 public class Message {

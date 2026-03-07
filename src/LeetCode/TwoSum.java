@@ -7,8 +7,8 @@ import java.util.Map;
 
 public class TwoSum {
     public static void main(String[] args) {
-        int[] arr = {2,7,1,15};
-        int[] res = twoSum1(arr, 9);
+        int[] arr = {3,2,1,4,};
+        int[] res = twoSum1(arr, 6);
         System.out.println(res[0] + " " + res[1]);
     }
 

@@ -22,18 +22,20 @@ public class MergeSortedArray {
      */
 
     public static void main(String[] args) {
-        /*int[] nums1 = {1,2,3,0,0,0};
+        int[] nums1 = {1,2,3,0,0,0};
         int[] nums2 = {2,5,6};
-        merge(nums1, 3, nums2, nums2.length);*/
+        mergeArray(nums1, 3, nums2, nums2.length);
+        System.out.println();
 
-        /*int[] nums1 = {1};
-        int[] nums2 = {};
-        merge(nums1, 1, nums2, 0);*/
+        int[] nums11 = {1};
+        int[] nums21 = {};
+        mergeArray(nums11, 1, nums21, 0);
+        System.out.println();
 
-        /*int[] nums1 = {0};
-        int[] nums2 = {1};
+        int[] nums111 = {0};
+        int[] nums211 = {1};
 
-        merge(nums1, 0, nums2, 1);*/
+        mergeArray(nums111, 0, nums211, 1);
 
     }
 
@@ -57,5 +59,24 @@ public class MergeSortedArray {
 
         Arrays.stream(nums1)
                 .forEach(i -> System.out.print(" " + i));
+    }
+
+    public static void mergeArray(int[]arr1, int m, int[] arr2, int n){
+        int first = m-1;
+        int second = n-1;
+        int pos = m+n-1;
+        while(second >= 0){
+            if(first >=0 && arr1[first] >= arr2[second]){
+                arr1[pos] = arr1[first];
+                pos--;
+                first--;
+            } else {
+                arr1[pos] = arr2[second];
+                pos--;
+                second--;
+            }
+        }
+
+        Arrays.stream(arr1).forEach(i -> System.out.print(" " + i));
     }
 }
